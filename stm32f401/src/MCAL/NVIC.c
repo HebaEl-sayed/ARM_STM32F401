@@ -222,10 +222,10 @@ NVIC_enuErrorStatus_t NVIC_SetPriority(IRQn_t IRQn, u8 PreemptPrriority ,  u8 Su
 		LOC_Priority = SubGroupPrriority |( PreemptPrriority << ((GroupPR - REFRENCEADDRESS_PRIGROUP )/PRIGROUP_DIFFRENCE));
 		LOC_index = IRQn/IPR_HOLDS_INTNUM ;
 
-		LOC_TEMP =NVIC->IPR[LOC_index];
+		LOC_TEMP = NVIC->IPR[LOC_index];
 		LOC_TEMP &=~ IPR_MASK;
 		LOC_TEMP |= LOC_Priority << (((IRQn % IPR_HOLDS_INTNUM)*IPR_INT_BITSNUM)+FOURBIT_SHIFT);
-        NVIC->IPR[LOC_index]=LOC_TEMP;
+                NVIC->IPR[LOC_index]=LOC_TEMP;
 
 	}
 	return loc_NVIC_ErrorStatus;
