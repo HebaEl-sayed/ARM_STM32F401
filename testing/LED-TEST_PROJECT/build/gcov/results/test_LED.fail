@@ -1,0 +1,35 @@
+---
+:source:
+  :path: test
+  :file: test_LED.c
+:successes:
+- :test: test_LED_SetState_validparameters
+  :line: 39
+  :message: ''
+  :unity_test_time: 0
+- :test: test_LED_SetState_InvalidName
+  :line: 47
+  :message: ''
+  :unity_test_time: 0
+- :test: test_LED_SetState_Invalidstate
+  :line: 52
+  :message: ''
+  :unity_test_time: 0
+:failures:
+- :test: test_LED_Init_ValidParameters
+  :line: 26
+  :message: Memory Mismatch. Byte 20 Expected 0x3C Was 0xF7. Function GPIO_INITPIN
+    Argument GPIO_CFG. Function called with unexpected argument value.
+  :unity_test_time: 0
+- :test: test_LED_Init_InvalidDirection
+  :line: 31
+  :message: Function GPIO_INITPIN.  Called more times than expected.
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 5
+  :passed: 3
+  :failed: 2
+  :ignored: 0
+:stdout: []
+:time: 0.11054209998110309

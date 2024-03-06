@@ -1,0 +1,7 @@
+---
+build/test/mocks/mock_GPIO.c:
+- TEST
+src/LED.c:
+- TEST
+src/LED_CFG.c:
+- TEST
